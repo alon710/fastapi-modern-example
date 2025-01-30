@@ -26,7 +26,7 @@ def lifespan(_: FastAPI):
 
     yield
 
-    # Clean up after the app is done
+    scheduler.shutdown()
 
 
 app = FastAPI(
